@@ -1,0 +1,158 @@
+/* ------------------------------------------ */
+/* ---------------Custom Properties---------- */
+/* ------------------------------------------ */
+:root{
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+
+
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+p,
+figure,
+picture{
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color:rgb(59, 65, 122) ;
+  }
+  /* make images easier to wokr with */
+img,
+picture{
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elemets easier to work with */
+input,
+button,
+textarea,
+select{
+    font: inherit;
+} 
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  .flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+  }
+
+  .grid{
+    display: grid;
+    gap: var(--gap, 1rem);
+  }
+
+  .container {
+    padding-inline: 2em;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+.container{
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.box {
+  background: #87caf3;;
+  padding: 3rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.2em;
+}
+
+.call-to-action{
+  --gap: 5rem;
+background: rgb(253, 178, 190);
+padding: 2rem;
+border-radius: 1rem;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  #header{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    background: #87caf3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+
+#header img{
+    height: 70px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+
+/* colors */
+
+.bg-dark {background-color: hsl(var(--clr-dark));}
+.bg-accent {background-color: hsl(var(--clr-light));}
+.bg-white{background-color: hsl(var(--clr-white));}
+
+
+.text-dark {color: hsl(var(--clr-dark) );}
+.text-accent {color: hsl(var(--clr-light) );}
+.text-white{color: hsl(var(--clr-white) );}
+
+
+.example-component{
+  background-color:hsl(var(--clr-light)/.5);
+}
